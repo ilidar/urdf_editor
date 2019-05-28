@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>urdf_editor</name>
+    <version>0.0.0</version>
+    <description>The urdf_editor package</description>
+    <maintainer email="denys.kotelovych@gmail.com">Denys Kotelovych</maintainer>
+    <license>TODO</license>
+    <buildtool_depend>catkin</buildtool_depend>
+    <depend>rviz</depend>
+    <depend>pluginlib</depend>
+    <depend>urdf</depend>
+    <depend>roslaunch</depend>
+    <export>
+        <rviz plugin="${prefix}/plugin_description.xml"/>
+    </export>
+</package>

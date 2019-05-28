@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="debug" default="false"/>
+    <arg name="rviz_args" value="-d $(find urdf_editor)/config/urdf_editor.rviz"/>
+    <arg unless="$(arg debug)" name="launch_prefix" value=""/>
+    <arg if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args"/>
+
+    <env name="ROSCONSOLE_CONFIG_FILE" value="$(find urdf_editor)/config/logging.config"/>
+
+    <node name="urdf_editor"
+          launch-prefix="$(arg launch_prefix)"
+          pkg="rviz"
+          type="rviz"
+          respawn="false"
+          args="$(arg rviz_args)"
+          output="screen">
+    </node>
+</launch>

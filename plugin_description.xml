@@ -1,0 +1,5 @@
+<library path="lib/liburdf_editor">
+    <class name="URDF Editor Panel" type="urdf_editor::ui::URDFEditorPanel" base_class_type="rviz::Panel">
+        <description>URDF Editor Panel</description>
+    </class>
+</library>
